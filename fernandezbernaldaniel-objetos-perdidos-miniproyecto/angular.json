@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "838b67be-ee27-4e5c-91d9-e077279626ce"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -97,6 +100,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "fernandezbernaldaniel-objetos-perdidos-miniproyecto:build:production",
+            "firebaseProject": "objetosperdidos-1e6f6",
+            "firebaseHostingSite": "objetosperdidos-1e6f6"
           }
         }
       }

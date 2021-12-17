@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "objetosperdidos-1e6f6": {
+      "hosting": {
+        "fernandezbernaldaniel-objetos-perdidos-miniproyecto": [
+          "objetosperdidos-1e6f6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "objetosperdidos-1e6f6"
+  }
+}
