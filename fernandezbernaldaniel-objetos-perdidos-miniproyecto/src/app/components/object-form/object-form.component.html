@@ -1,32 +1,37 @@
-<form [formGroup]="listForm" (ngSubmit)="addObjeto()">
-    <div>
-        <h3>Seleccione una categoria.</h3>
-        <mat-form-field appearance="fill">
-            <mat-label>Lista de categorias.</mat-label>
-            <mat-select formControlName="categoria">
-                <mat-option *ngFor="let categoria of categorias"
-                [value] = "categoria.nombre">
-                {{categoria.nombre}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-    </div>
-    <div>
-        <h3>Nombre del objeto</h3>
-        <mat-form-field appearance="fill">
-            <mat-label>Nombre del objeto</mat-label>
-            <input matInput formControlName = "nombre" >
-        </mat-form-field>
-    </div>
-    <div>
-        <h3>Descripción.</h3>
-        <mat-form-field appearance="fill">
-            <mat-label>Descripción del objeto</mat-label>
-            <input matInput formControlName = "descripcion" >
-        </mat-form-field>
-    </div>
-    <div>
-        <button mat-button type="submit"><mat-icon>save</mat-icon></button>
-    </div>
-</form>
-
+<div fxFlexFill fxLayoutAlign="center top" class="form">
+    <form [formGroup]="listForm" (ngSubmit)="addObjeto()">
+            <div class="campos-formulario"> 
+                <h3>Seleccione una categoria.</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>Lista de categorias.</mat-label>
+                    <mat-select formControlName="categoria">
+                        <mat-option *ngFor="let categoria of categorias"
+                        [value] = "categoria.id">
+                        {{categoria.nombre}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="campos-formulario">
+                <h3>Nombre del objeto</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre del objeto</mat-label>
+                    <input matInput formControlName = "nombre" >
+                </mat-form-field>
+            </div>
+            <div class="campos-formulario">
+                <h3>Descripción.</h3>
+                <mat-form-field appearance="fill">
+                    <mat-label>Descripción del objeto</mat-label>
+                    <input matInput formControlName = "descripcion" >
+                </mat-form-field>
+            </div>
+            <div class="campos-formulario">  
+                <app-mapa></app-mapa>
+            </div>   
+        <div class="campos-formulario">
+            <button mat-button type="submit"><mat-icon>save</mat-icon>Guardar</button>
+        </div>
+        
+    </form>
+</div>
